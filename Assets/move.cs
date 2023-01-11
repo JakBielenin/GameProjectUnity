@@ -13,14 +13,14 @@ public class move : MonoBehaviour
 
     void Start()
     {
-       
+        rgbody = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
         float moveX = 0;
         float moveY = 0;
-        
+
         if (Input.GetKey(KeyCode.W))
         {
             moveY = 1f;
@@ -70,5 +70,6 @@ public class move : MonoBehaviour
     private void FixedUpdate()
     {
         rgbody.velocity = move_direction * move_speed;
+        transform.rotation = Quaternion.Euler(set_roation);
     }
 }
