@@ -6,17 +6,7 @@ public class Camera_following : MonoBehaviour
 {
     public Transform player;
     public Vector3 corector = new Vector3(0, 0, -10);
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void FixedUpdate()
     {
         transform.position = player.position + corector;
